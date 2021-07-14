@@ -19,4 +19,4 @@ jobs:
       - name: Clone Test Repo
         run: |
           echo ${{secrets.PAT}} | gh auth login --with-token
-          gh clone ${{secrets.TEST_REPO}}
+          gh repo clone ${{secrets.TEST_REPO}}
