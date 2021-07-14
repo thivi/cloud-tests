@@ -18,5 +18,7 @@ jobs:
     steps:
       - name: Clone Test Repo
         run: |
+          git config --global user.email "test.runner@github.action.com"
+          git config --global user.name "test-runner"
           echo ${{secrets.PAT}} | gh auth login --with-token
           gh repo clone ${{secrets.TEST_REPO}}
